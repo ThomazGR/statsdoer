@@ -88,19 +88,7 @@ async def mean(ctx, *args):
     """
     Generate mean from given dataset.
 
-    Parameters
-    ----------
-    dataframe : str
-        Link for the dataframe chosen by user
-    fcai : bool, optional
-        Boolean that lets user choose if uses the First Columns As Index, defaults to False
-    tpose: bool, optional
-        Boolean that lets user choose whether the DF will transpose or not, defaults to False
-
-    Returns
-    -------
-    dataframe
-        Returns the mean for the given array or a dataframe containing means for every column
+    Returns the mean for the given array or a dataframe containing means for every column
     """
     param_def = {"fcai": "False", "tpose": "False", "dataframe": ""}
     argchecked = check_args(param_rec=args, param_def=param_def)
@@ -126,19 +114,7 @@ async def median(ctx, *args):
     """
     Generate median from given dataset.
 
-    Parameters
-    ----------
-    dataframe : str
-        Link for the dataframe chosen by user
-    fcai : bool, optional
-        Boolean that lets user choose if uses the First Columns As Index, defaults to False
-    tpose: bool, optional
-        Boolean that lets user choose whether the DF will transpose or not, defaults to False
-
-    Returns
-    -------
-    dataframe
-        Returns the median for the given array or a dataframe containing means for every column
+    Returns the median for the given array or a dataframe containing means for every column
     """
     param_def = {"fcai": "False", "tpose": "False", "dataframe": ""}
     argchecked = check_args(param_rec=args, param_def=param_def)
@@ -151,7 +127,7 @@ async def median(ctx, *args):
         tpose = argchecked.get("tpose")
         dataframe = argchecked.get("dataframe")
 
-    median = media(
+    median = mediana(
         dataframe=dataframe,
         fcai=bool(distutils.util.strtobool(fcai)),
         tpose=bool(distutils.util.strtobool(tpose)),
@@ -164,19 +140,7 @@ async def mode(ctx, *args):
     """
     Generate mode from given dataset.
 
-    Parameters
-    ----------
-    dataframe : str
-        Link for the dataframe chosen by user
-    fcai : bool, optional
-        Boolean that lets user choose if uses the First Columns As Index, defaults to False
-    tpose: bool, optional
-        Boolean that lets user choose whether the DF will transpose or not, defaults to False
-
-    Returns
-    -------
-    dataframe
-        Returns the mode for the given array or a dataframe containing means for every column
+    Returns the mode for the given array or a dataframe containing means for every column
     """
     param_def = {"fcai": "False", "tpose": "False", "dataframe": ""}
     argchecked = check_args(param_rec=args, param_def=param_def)
@@ -205,19 +169,7 @@ async def describe(ctx, *args):
     """
     Descriptive statistics include those that summarize the central tendency, dispersion and shape of a dataset’s distribution, excluding NaN values.
 
-    Parameters
-    ----------
-    dataframe : str
-        Link for the dataframe chosen by user
-    fcai : bool, optional
-        Boolean that lets user choose if uses the First Columns As Index, defaults to False
-    tpose: bool, optional
-        Boolean that lets user choose whether the DF will transpose or not, defaults to False
-
-    Returns
-    -------
-    dataframe
-        Returns the descriptive statistics of the dataframe
+    Returns the descriptive statistics of the dataframe
     """
     param_def = {"fcai": "False", "tpose": "False", "dataframe": ""}
     argchecked = check_args(param_rec=args, param_def=param_def)
@@ -243,19 +195,7 @@ async def plot_mean(ctx, *args):
     """
     Generate mean for columns from given dataset and plot a line graph.
 
-    Parameters
-    ----------
-    dataframe : str
-        Link for the dataframe chosen by user
-    fcai : bool, optional
-        Boolean that lets user choose if uses the First Columns As Index, defaults to False
-    tpose: bool, optional
-        Boolean that lets user choose whether the DF will transpose or not, defaults to False
-
-    Returns
-    -------
-    dataframe
-        Returns the mean for every column and a figure with line plot for every mean calculated
+    Returns the mean for every column and a figure with line plot for every mean calculated
     """
     param_def = {"fcai": "False", "tpose": "False", "dataframe": ""}
     argchecked = check_args(param_rec=args, param_def=param_def)
@@ -286,19 +226,7 @@ async def correlation_matrix(ctx, *args):
     """
     Compute pairwise correlation of columns, excluding NA/null values. Choose either pearson, kendall or spearman.
 
-    Parameters
-    ----------
-    dataframe : str
-        Link for the dataframe chosen by user
-    m_used : str
-        Let user choose the method used for correlation. Options: pearson, kendall or spearman
-    fcai: bool, optional
-        Boolean that lets user choose if uses the First Columns As Index, defaults to False
-
-    Returns
-    -------
-    dataframe
-        Returns the correlation matrix from a dataframe containing r value
+    Returns the correlation matrix from a dataframe containing r value
     """
     param_def = {"fcai": "False", "tpose": "False", "m_used": "", "dataframe": ""}
     argchecked = check_args(param_rec=args, param_def=param_def)
@@ -327,19 +255,7 @@ async def normality(ctx, *args):
     """
     Test whether a sample differs from a normal distribution.
 
-    Parameters
-    ----------
-    dataframe : str
-        Link for the dataframe chosen by user
-    fcai : bool, optional
-        Boolean that lets user choose if uses the First Columns As Index, defaults to False
-    tpose: bool, optional
-        Boolean that lets user choose whether the DF will transpose or not, defaults to False
-
-    Returns
-    -------
-    dataframe
-        Returns k2 and p value for each column tested for normality.
+    Returns k2 and p value for each column tested for normality.
     """
     param_def = {"fcai": "False", "tpose": "False", "dataframe": ""}
     argchecked = check_args(param_rec=args, param_def=param_def)
@@ -370,22 +286,7 @@ async def oneway(ctx, *args):
     """
     Runs One-Way ANOVA for columns from a dataframe chosen by user. Each columns is a group.
 
-    Parameters
-    ----------
-    dataframe : str
-        Link for the dataframe chosen by user
-    fcai : bool, optional
-        Boolean that lets user choose if uses the First Columns As Index, defaults to False
-    tpose: bool, optional
-        Boolean that lets user choose whether the DF will transpose or not, defaults to False
-    *colunas: str
-        After tpose Boolean parameter, user will need to choose the columns from the dataframe to assign each group of ANOVA test. Columns must be separated by space and after tpose param.
-
-    Returns
-    -------
-    dataframe
-        Returns F statistics and p value.
-
+    Returns F statistics and p value.
     """
     param_def = {"dataframe": "", "fcai": "False", "tpose": "False", "colunas": ""}
     argchecked = check_args(param_rec=args, param_def=param_def)
