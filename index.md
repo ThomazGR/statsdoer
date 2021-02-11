@@ -1,3 +1,9 @@
+<title>Stats doer Docs</title>
+<link rel="shortcut icon" href="favicon.ico">  
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+
 # Welcome to my documentation!
 
 Hiya, my name is Stats doer. How ya doin'? I am a Discord bot created with [discord.py](https://discordpy.readthedocs.io/en/latest/index.html)!
@@ -11,11 +17,11 @@ If you really want to read my documentation then take a seat and enjoy everythin
 ## How to use
 
 First of all, you need to call me onto your own Discord server.
-You can call my through this [LINK](https://discord.com/api/oauth2/authorize?client_id=805567313398726698&permissions=8&scope=bot).
+You can call my through this [link](https://discord.com/api/oauth2/authorize?client_id=805567313398726698&permissions=8&scope=bot).
 
 After calling me I will be able to answer all your calls!
 Ask for help typing +help and I will show you all I can do for you!
-Call me typing +help commandname and I will give you a brief description of the command!
+Call me typing +help command_name and I will give you a brief description of the command!
 
 If you need further help and want to read about the commands, the statistic behind and even more, take some time and read my command list down below!
 
@@ -39,7 +45,7 @@ This is the end of configuration and installation to get the bot running. Now yo
 
 | COMMAND NAME | PARAMETER | RETURN |
 | -------------|-----------|------- |
-| +help | **command_name**: _str_, optional_<br>Requieres a command name from the list | Help section from specific command name if passed |
+| +help | **command_name**: _str, optional_<br>Requieres a command name from the list | Help section from specific command name if passed |
 | +mean | **dataframe**: _str_<br> > Complete link for a RAW .csv file from a Github repository<br><br>**fcai**: _bool, optional_<br> > Boolean that lets user choose if uses the First Columns As Index, defaults to False<br><br>**tpose**: _bool, optional_<br> > Boolean that lets user choose whether the DF will transpose or not, defaults to False | Mean from given array or mean for every column if dataframe has been passed |
 | +mode | **dataframe**: _str_<br> > Complete link for a RAW .csv file from a Github repository<br><br>**fcai**: _bool, optional_<br> > Boolean that lets user choose if uses the First Columns As Index, defaults to False<br><br>**tpose**: _bool, optional_<br> > Boolean that lets user choose whether the DF will transpose or not, defaults to False | Mode from given array or mean for every column if dataframe has been passed |
 | +median | **dataframe**: _str_<br> > Complete link for a RAW .csv file from a Github repository<br><br>**fcai**: _bool, optional_<br> > Boolean that lets user choose if uses the First Columns As Index, defaults to False<br><br>**tpose**: _bool, optional_<br> > Boolean that lets user choose whether the DF will transpose or not, defaults to False | Median from given array or mean for every column if dataframe has been passed |
@@ -50,4 +56,4 @@ This is the end of configuration and installation to get the bot running. Now yo
 | +anova1w | **dataframe**: _str_<br> > Complete link for a RAW .csv file from a Github repository<br><br>**fcai**: _bool, optional_<br> > Boolean that lets user choose if uses the First Columns As Index, defaults to False<br><br>**tpose**: _bool, optional_<br> > Boolean that lets user choose whether the DF will transpose or not, defaults to False<br><br>**colunas**: _str_<br> > String containing list of columns referring as each group to be compared in the test separated by comma without spaces e.g. `colunas=colunaG,colunaF,colunaR` | F statistics and p value from One-way ANOVA using groups passed in colunas |
 
 ## Contact Information
-My maintainer's name is Thomaz Guadagnini, you can see him clicking [HERE](http://thomazgr.github.io) or contact through his email [HERE](mailto:thomaz@vivaldi.net) which is thomaz@vivaldi.net.
+My maintainer's name is Thomaz Guadagnini, you can see him clicking [here](http://thomazgr.github.io) or contact through his email [here](mailto:thomaz@vivaldi.net) which is thomaz@vivaldi.net.
