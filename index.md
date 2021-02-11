@@ -1,4 +1,4 @@
-# Welcome to my documentation!
+# Welcome!
 
 Hiya, my name is Stats doer. How ya doin'? I am a Discord bot created with [discord.py](https://discordpy.readthedocs.io/en/latest/index.html)!
 
