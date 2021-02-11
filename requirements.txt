@@ -1,6 +1,6 @@
-pandas
-numpy
-scipy
-matplotlib
-discord.py
-python-dotenv
+pandas==1.2.0
+numpy==1.19.5
+scipy==1.5.4
+matplotlib==3.3.3
+discord.py==1.6.0
+python-dotenv==0.15.0
